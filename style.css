@@ -38,7 +38,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    left: 45px;
+    left: 12%;
     width: 2px;
     height: 100%;
     background: rgba(220, 20, 60, 0.5);
@@ -184,18 +184,74 @@ li a:hover {
 }
 
 /* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 25px 20px 20px 14%; 
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    input, button {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    .input-group {
+        gap: 8px;
+    }
+
+    .input-group button {
+        flex-shrink: 0;
+        width: auto;
+    }
+}
 
 @media (max-width: 500px) {
     .container {
         width: 100%;
-        padding: 20px;
+        padding: 20px 15px 15px 16%; 
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
-    input, button {
+    .input-group {
+        flex-wrap: nowrap;
+    }
+
+    input {
+        min-width: 0;
+    }
+
+    .input-group button {
         font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .filtros {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .filtros button {
+        flex: 1 1 30%;
+        min-width: 80px;
+        font-size: 13px;
+        padding: 6px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group button {
+        width: 100%;
     }
 }
